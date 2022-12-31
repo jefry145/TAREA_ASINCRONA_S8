@@ -1,0 +1,30 @@
+.form-control{
+    width: 20% !important;
+}
+label{
+    font-weight: 600;
+}
+#botonRegistrar{
+    box-shadow: 0px 1px 13px 4px rgb(253, 237, 88);
+}
+#tabla{
+    margin: 3%;
+    background: rgb(252, 252, 252);
+    border-radius: 13px;
+    box-shadow: 0px 1px 18px 3px rgb(129, 255, 213);
+}
+.titulo_tabla{
+    font-weight: 900;
+}
+ul{
+    list-style-type: circle;
+}
+#Validacion{
+    margin: 0 37%;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px 3px rgb(163, 255, 240);
+    border-radius: 6px;
+    width: 19%;
+}

@@ -1,0 +1,66 @@
+ <div class="row px-4">
+         <div class="col">
+            <h1>Registro Estudiante</h1> 
+        </div>
+ </div>
+<div class="row px-5">
+    <div class="col">
+         <label >Codigo:</label><br>
+            <input class="form-control" type="number" [(ngModel)]="codigo" name="codigo"><br>
+         <label>Nombre:</label><br>
+            <input class="form-control" type="text" [(ngModel)]="usuario" name="usuario"><br>
+         <label>Apellido:</label><br>
+            <input class="form-control" type="text" [(ngModel)]="apellido" name="apellido"><br>
+         <label>Edad:</label><br>
+            <input class="form-control" type="number" [(ngModel)]="edad" name="edad"><br><br>
+    </div>
+</div>
+<div class="row px-5">
+   <div class="col">
+       <input class="btn btn-warning"  type="button" (click)="mostrartabla()" id="botonRegistrar" value="Registrar">
+   </div>
+</div>
+<div id="tabla" class="row py-3">
+  <div class="col">
+    <ul><span class="titulo_tabla" >#</span>
+      <li *ngFor="let element of data">
+        {{element.codigo}}
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <ul><span class="titulo_tabla" >Usuario</span>
+      <li *ngFor="let element of data">
+        {{element.nombre}}
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <ul><span class="titulo_tabla" >Apellido</span>
+      <li *ngFor="let element of data">
+        {{element.apellido}}
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <ul><span class="titulo_tabla" >Edad</span>
+      <li *ngFor="let element of data">
+        {{element.edad}}
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <ul><span class="titulo_tabla" >Mayor o menor de edad</span>
+      <li *ngFor="let element of data">
+        {{element.difedad}}
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="Validacion" class="row text-center">
+  <div class="col">
+    <div class="text-success" *ngIf="show; else elseBlock">{{user}} Es Mayor De Edad</div>
+    <ng-template #elseBlock><span id="text_incorrecto" class="text-danger" >{{user}} Es Menor De Edad</span></ng-template>
+  </div>
+</div>
+ 
